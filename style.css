@@ -1,9 +1,12 @@
+/* ==== GENERALES ==== */
 * {
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
 }
 
+
+/* ==== HEADER ==== */
 .container__principalHeader {
   width: 100vw;
   height: 8vh;
@@ -74,4 +77,20 @@
   cursor: pointer;
   background-color: #4f5aef;
   transition: .2s ease;
+}
+
+/* ==== MAIN ==== */
+.container__view {
+  display: grid;
+  grid-template-columns: .2fr .8fr;
+}
+
+.list {
+  background-color: aqua;
+  height: 92vh;
+}
+
+.store {
+  background-color: red;
+  height: 92vh;
 }
