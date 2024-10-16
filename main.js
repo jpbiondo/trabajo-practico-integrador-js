@@ -5,7 +5,17 @@ import './style.css';
 
 // ==== APLICACION ====
 handleGetProductToStore();
+export let cateogoriaActiva = null;
 
+export const setCategoriaActiva = (categoria) => {
+    cateogoriaActiva = categoria;
+};
+
+export let productoActivo = null;
+
+export const setProductoActivo = (producto) => {
+    productoActivo = producto;
+}
 
 
 renderCategories();
@@ -28,14 +38,40 @@ btnCancel.addEventListener("click", () => {
 
 
 // open close modal functions
-const openModal = () => {
+export const openModal = () => {
     const modal = document.querySelector("#modalPopUp");
     modal.style.display = 'flex';
+    if(productoActivo) {
+        const nombre = document.querySelector("#nombre");
+        const img = document.querySelector("#img");
+        const precio = document.querySelector("#precio");
+        const categoria = document.querySelector("#categoria");
+        
+        nombre.value = productoActivo.nombre;
+        categoria.value = productoActivo.categoria;
+        img.value = productoActivo.img;
+        precio.value = productoActivo.precio;
+    }
 }
 
-const closeModal = () => {
+export const closeModal = () => {
     const modal = document.querySelector("#modalPopUp");
     modal.style.display = 'none';
+    setProductoActivo(null);
+    resetModal();
+}
+
+const resetModal = () => {
+    const nombre = document.querySelector("#nombre");
+    const img = document.querySelector("#img");
+    const precio = document.querySelector("#precio");
+    const categoria = document.querySelector("#categoria");
+    
+    nombre.value = '';
+    img.value = '';
+    precio.value = 0;
+    categoria.value = 'Seleccione una categoria';
+
 }
 
 //save or modify elements
@@ -52,13 +88,27 @@ const handleSaveOrModifyElements = () => {
     const precio = document.querySelector("#precio").value;
     const categoria = document.querySelector("#categoria").value;
 
-    let obj = {
-        id:new Date().toISOString(),
-        nombre,
-        img,
-        precio,
-        categoria,
+    let obj = null;
+
+    if(productoActivo) {
+        obj = {
+            ...productoActivo,
+            nombre,
+            img,
+            precio,
+            categoria,
+        };
+    } else {
+        obj = {
+            id:new Date().toISOString(),
+            nombre,
+            img,
+            precio,
+            categoria,
+        };
     }
+
+    
 
     setInLocalStorage(obj);
     handleGetProductToStore();
