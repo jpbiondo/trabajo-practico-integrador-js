@@ -16,15 +16,16 @@ export const handleRenderList = (products) => {
        
         const productsHTML = products.map((product, index) => {
             return `
-                <div id="product-${product.categoria}-${index}">
+                <div 
+                    class = "containerTargetItem"
+                    id="product-${product.categoria}-${index}">
                     <div>
                         <img src =${product.img}>
                         <div>
                             <h2> ${product.nombre}
                         </div>
-                        <div>
+                        <div class="targetProps">
                             <p> <b>Precio:</b> ${product.precio}</p>
-                            <p> <b>Categoria:</b> ${product.categoria}</p>
                         </div>
                     </div>
                 </div>
@@ -32,9 +33,13 @@ export const handleRenderList = (products) => {
         });
 
         return `
-            <section>
-                <h3>${title}</h3>
-                ${productsHTML.join("")}
+            <section class="sectionStore">
+                <div class="containerTitleSection">
+                    <h3>${title}</h3>
+                </div>
+                <div class="containerProductStore">
+                    ${productsHTML.join("")}
+                </div>
             </section>
         `;
     };

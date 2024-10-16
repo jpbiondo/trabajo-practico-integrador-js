@@ -93,10 +93,69 @@
 /* ==== STORE ==== */
 
 .store {
-  background-color: red;
+  max-height: 92vh;
+  overflow: auto;
+  background-color: #ccc;
   height: 92vh;
+  width: 100%;
 }
 
+.sectionStore {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionStore img {
+  width: 100%;
+  border-radius: .4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.containerTitleSection {
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid #ccc;
+}
+
+.containerProductStore {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, .6fr);
+  gap: 2vh;
+}
+
+.containerTargetItem {
+  width: 20vw;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .4rem;
+  border-radius: .4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.containerTargetItem h2 {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.containerTargetItem p {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.targetProps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 /* ==== LISTASIDE ==== */
 .listAside {
   display: flex;
