@@ -19,7 +19,7 @@ export const setInLocalStorage = (productIn) => {
         productInLocal[existingIndex] = productIn;
     }
 
-    localStorage.setItem("products", JSON.parse(productInLocal))
+    localStorage.setItem("products", JSON.stringify(productInLocal))
 
     
 }

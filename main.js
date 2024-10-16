@@ -1,5 +1,12 @@
+import { setInLocalStorage } from "./src/persistence/localStorage";
 import { renderCategories } from "./src/services/categories";
+import { handleGetProductToStore } from "./src/views/store";
 import './style.css';
+
+// ==== APLICACION ====
+handleGetProductToStore();
+
+
 
 renderCategories();
 
@@ -45,5 +52,14 @@ const handleSaveOrModifyElements = () => {
     const precio = document.querySelector("#precio").value;
     const categoria = document.querySelector("#categoria").value;
 
+    let obj = {
+        id:new Date().toISOString(),
+        nombre,
+        img,
+        precio,
+        categoria,
+    }
+
+    setInLocalStorage(obj);
     closeModal();
 }
