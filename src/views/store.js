@@ -1,5 +1,6 @@
-import { openModal, setProductoActivo } from "../../main";
+import { setProductoActivo } from "../../main";
 import { handleGetProductLocalStorage } from "../persistence/localStorage"
+import { openModal } from "./modal";
 
 // ==== STORE ====
 export const handleGetProductToStore = () => {

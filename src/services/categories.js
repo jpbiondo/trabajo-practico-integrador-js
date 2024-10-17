@@ -24,13 +24,14 @@ const handlerFilterProductsByCategory = (category) => {
         
         case "menorPrecio":
             result = products.sort((a,b) => a.precio - b.precio);
+            break;
 
         default:
             result = products;
             break;
     }
 
-    handleRenderList(products);
+    handleRenderList(result);
 
 }
 
