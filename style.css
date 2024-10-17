@@ -141,6 +141,12 @@
   box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
+.containerTargetItem:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  transition: .2s ease;
+}
+
 .containerTargetItem h2 {
   font-size: 3vh;
   text-align: center;
@@ -184,6 +190,12 @@
 .listAside ul li {
   font-size: 2vh;
   font-weight: 500;
+}
+
+.listAside ul li:hover {
+  cursor:pointer;
+  background-color: #4751dd;
+  color: #fff;
 }
 
 .liActive {

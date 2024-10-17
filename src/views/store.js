@@ -58,7 +58,6 @@ export const handleRenderList = (products) => {
 
         products.forEach((product, index) => {
             const productContainer = document.querySelector(`#product-${product.categoria}-${index}`);
-            console.log(`product-${product.categoria}-${index}`);
             productContainer.addEventListener("click", () => {
                 setProductoActivo(product);
                 openModal();
