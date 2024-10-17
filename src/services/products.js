@@ -1,4 +1,5 @@
 //save or modify elements
+import Swal from 'sweetalert2';
 
 import { productoActivo } from "../../main";
 import { handleGetProductLocalStorage, setInLocalStorage } from "../persistence/localStorage";
@@ -39,7 +40,11 @@ const handleSaveOrModifyElements = () => {
         };
     }
 
-    
+    Swal.fire({
+        title: "Correcto!",
+        text: "Producto guardado exitosamente!",
+        icon: "success"
+      });
 
     setInLocalStorage(obj);
     handleGetProductToStore();
@@ -48,10 +53,24 @@ const handleSaveOrModifyElements = () => {
 
 //delete product
 export const handleDeleteProduct = () => {
-    const products = handleGetProductLocalStorage();
-    console.log(products);
-    const result = products.filter((el) => el.id !== productoActivo.id);
-    localStorage.setItem("products", JSON.stringify(result));
+
+    Swal.fire({
+        title: "Estás seguro que deseas eliminar este elemento?",
+        text: "No podrás revertir esta accion!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            const products = handleGetProductLocalStorage();
+            const result = products.filter((el) => el.id !== productoActivo.id);
+            // localStorage.setItem("products", JSON.stringify(result));
+        } 
+        closeModal();
+      });
+
 
     handleRenderList(handleGetProductLocalStorage());
 };

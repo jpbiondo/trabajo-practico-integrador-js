@@ -16,18 +16,19 @@ export const openModal = () => {
 
     const btnDelete = document.querySelector("#deleteBtn");
     
-    btnDelete.style.display = productoActivo ? 'block' : 'none';
-
-    const nombre = document.querySelector("#nombre");
-    const img = document.querySelector("#img");
-    const precio = document.querySelector("#precio");
-    const categoria = document.querySelector("#categoria");
-    
-    nombre.value = productoActivo.nombre;
-    categoria.value = productoActivo.categoria;
-    img.value = productoActivo.img;
-    precio.value = productoActivo.precio;
-    
+    btnDelete.style.display = 'block';
+    if(productoActivo) {
+        btnDelete.style.display = 'none';
+        const nombre = document.querySelector("#nombre");
+        const img = document.querySelector("#img");
+        const precio = document.querySelector("#precio");
+        const categoria = document.querySelector("#categoria");
+        
+        nombre.value = productoActivo.nombre;
+        categoria.value = productoActivo.categoria;
+        img.value = productoActivo.img;
+        precio.value = productoActivo.precio;
+    }    
 }
 
 export const closeModal = () => {
