@@ -21,15 +21,16 @@ export const handleRenderList = (products) => {
                 <div 
                     class = "containerTargetItem"
                     id="product-${product.categoria}-${index}">
-                    <div>
+                        <div class="containerTargetItemImg">
                         <img src =${product.img}>
+                        </div>
                         <div>
                             <h2> ${product.nombre}
                         </div>
                         <div class="targetProps">
-                            <p> <b>Precio:</b> ${product.precio}</p>
+                            <p class="containerTargetItemPrice">$${product.precio}</p>
+                            <p class="containerTargetItemCategory">${product.categoria}</p>
                         </div>
-                    </div>
                 </div>
             `
         });
