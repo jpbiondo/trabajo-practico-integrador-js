@@ -18,14 +18,16 @@
   <body>
     <!-- HEADER -->
     <header>
-      <div class="container__principalHeader">
-        <div class="container__contentHeader">
+      <nav class="container__principalHeader">
+          <div id="logo">
+            <img src="/logo.png" id="logo-img" alt="Logo">
+          </div>
           <div class="headerSearch">
             <input 
               class="inputHeader" 
               id="inputHeader"
               type="text"
-              placeholder="Ingrese un elemento">
+              placeholder="Buscar comida...">
             <button 
               id="buttonSearch"
               class="buttonSearch">
@@ -36,14 +38,13 @@
           </div>
   
           <div>
-            <button class="buttonAdd">Agregar elemento
+            <button class="buttonAdd">Agregar producto
               <span class="material-symbols-outlined">
                 library_add
                 </span>
             </button>
           </div>
-        </div>
-      </div>
+        </nav>
     </header>
 
     <!-- MAIN -->
