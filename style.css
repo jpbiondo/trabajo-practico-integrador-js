@@ -68,8 +68,6 @@ body {
 
 .buttonSearch:hover {
   cursor: pointer;
-  background-color: #4f5aef;
-  transition: .2s ease;
 }
 
 .buttonAdd {
