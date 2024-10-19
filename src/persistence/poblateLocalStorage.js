@@ -1,5 +1,7 @@
 //para popular el sitio con 9 productos, 6 de cada categoría
 export const poblateLocalStorage = () => {
+    if(localStorage.getItem("products")) return;
+
     localStorage.setItem("products", JSON.stringify([
         //Hamburguesas
         {

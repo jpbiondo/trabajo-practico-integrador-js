@@ -31,4 +31,4 @@ btnSearch.addEventListener("click", () => {
     handleSearchProductByName();
 });
 
-//poblateLocalStorage();
+poblateLocalStorage();
