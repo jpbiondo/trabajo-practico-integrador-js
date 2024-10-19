@@ -18,6 +18,7 @@ export const setProductoActivo = (producto) => {
     productoActivo = producto;
 }
 
+poblateLocalStorage();
 handleGetProductToStore();
 renderCategories();
 
@@ -31,4 +32,3 @@ btnSearch.addEventListener("click", () => {
     handleSearchProductByName();
 });
 
-poblateLocalStorage();
