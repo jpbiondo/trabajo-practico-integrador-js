@@ -16,9 +16,9 @@ export const openModal = () => {
 
     const btnDelete = document.querySelector("#deleteBtn");
     
-    btnDelete.style.display = 'block';
+    btnDelete.style.display = 'none';
     if(productoActivo) {
-        btnDelete.style.display = 'none';
+        btnDelete.style.display = 'block';
         const nombre = document.querySelector("#nombre");
         const img = document.querySelector("#img");
         const precio = document.querySelector("#precio");
