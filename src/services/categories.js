@@ -39,7 +39,7 @@ const handlerFilterProductsByCategory = (category) => {
 export const renderCategories = () => {
     const ulList = document.querySelector("#listFilter");
     ulList.innerHTML = `
-    <li id="todo"> Todos los elementos </li>
+    <li class="liActive" id="todo"> Todos los elementos </li>
     <li id="hamburguesas"> Hamburguesas </li>
     <li id="papas"> Papas </li>
     <li id="gaseosas"> Gaseosas </li>
