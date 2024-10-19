@@ -6,8 +6,6 @@ import { handleRenderList } from "../views/store";
 const handlerFilterProductsByCategory = (category) => {
     const products = handleGetProductLocalStorage();
     
-    if(category === categoriaActiva) return;
-
     setCategoriaActiva(category);
 
     let result;
