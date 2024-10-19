@@ -67,6 +67,7 @@ export const handleDeleteProduct = () => {
             const products = handleGetProductLocalStorage();
             const result = products.filter((el) => el.id !== productoActivo.id);
             localStorage.setItem("products", JSON.stringify(result));
+            handleGetProductToStore();
         } 
         closeModal();
       });
