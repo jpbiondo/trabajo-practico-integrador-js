@@ -18,7 +18,9 @@ export const setProductoActivo = (producto) => {
     productoActivo = producto;
 }
 
-poblateLocalStorage();
+//Uncomment next line if you want to have a products populations
+//poblateLocalStorage();
+
 handleGetProductToStore();
 renderCategories();
 
