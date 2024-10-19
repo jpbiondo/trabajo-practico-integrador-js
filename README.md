@@ -3,7 +3,9 @@ Trabajo practico integrador de un ecommerce de comidas. Permite gestionar tus pr
 
 
 Además de su funcionalidad en JS, cuenta con CSS responsive para poder adaptarse a las pantallas más pequeñas.
+
 ## Ejecución del proyecto
+
 1. Clonar el repositorio:
 ```sh
 git clone https://github.com/jpbiondo/trabajo-practico-integrador-js.git
@@ -17,3 +19,8 @@ npm install
 ```sh
 npm run dev
 ```
+4. Abrir el enlace mostrado en consola en el navegador
+
+Puede correr este proyecto con un conjunto de productos preestablecido descomentando la línea de `//poblateLocalStorage();` en el `main.js`.
+
+
