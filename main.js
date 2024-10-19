@@ -1,3 +1,4 @@
+import { poblateLocalStorage } from "./src/persistence/poblateLocalStorage";
 import { renderCategories } from "./src/services/categories";
 import { handleSearchProductByName } from "./src/services/searchBar";
 import { openModal } from "./src/views/modal";
@@ -29,3 +30,5 @@ const btnSearch = document.querySelector("#buttonSearch");
 btnSearch.addEventListener("click", () => {
     handleSearchProductByName();
 });
+
+//poblateLocalStorage();
